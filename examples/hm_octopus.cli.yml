@@ -6,7 +6,7 @@
 
   tasks:
     - name: Octopus 1
-      hm_octopus_cli:
+      es.apfz.hm_octopus_cli:
         host: 192.168.0.31
         user: admin
         password: TopSecret,Man!
@@ -21,7 +21,7 @@
         save: true
 
     - name: Octopus 2
-      hm_octopus_cli:
+      es.apfz.hm_octopus_cli:
         host: 172.22.65.17
         user: admin
         password: TopSecret,Man!
