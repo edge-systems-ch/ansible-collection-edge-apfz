@@ -54,6 +54,36 @@ notes:
   - Check mode is not supported as commands are executed directly on the terminal.
 '''
 
+EXAMPLES = r'''
+- name: Octopus 1
+  edge.apfz.hm_octopus_cli:
+    host: 192.168.0.31
+    user: admin
+    password: T0pSecret,M4n!
+    lines:
+      - "show sysinfo"
+      - "enable"
+      - "show telnetcon"
+      - "telnetcon maxsessions 4"
+      - "configure"
+      - "address-conflict ongoing-detection enable"
+      - "show eventlog"
+    save: true
+
+- name: Octopus 2
+  edge.apfz.hm_octopus_cli:
+    host: 172.22.65.17
+    user: admin
+    password: T0pSecret,M4n!
+    lines:
+      - "enable"
+      - "configure"
+      - "show telnet"
+      - "telnet max-sessions 5"
+      - "show eventlog"
+    save: true
+'''
+
 RETURN = r'''
 log:
     description: Full interaction history including internal Ansible markers for debugging.
