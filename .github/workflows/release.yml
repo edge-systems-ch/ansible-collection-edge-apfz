@@ -40,12 +40,12 @@ jobs:
 
       - name: Sign Collection
         run: |
-          FILE=$(ls es-apfz-*.tar.gz)
+          FILE=$(ls edge-apfz-*.tar.gz)
           echo "${{ secrets.ANSIBLE_GPG_PASSPHRASE }}" | gpg --batch --yes --passphrase-fd 0 --pinentry-mode loopback --detach-sign --armor "$FILE"
 
       - name: Verify Signature (Self-Test)
         run: |
-          FILE=$(ls es-apfz-*.tar.gz)
+          FILE=$(ls edge-apfz-*.tar.gz)
           # We import the public key you stored in the repo to verify the work
           gpg --import keys/public.key
           gpg --verify "$FILE.asc" "$FILE"
@@ -54,8 +54,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            es-apfz-*.tar.gz
-            es-apfz-*.tar.gz.asc
+            edge-apfz-*.tar.gz
+            edge-apfz-*.tar.gz.asc
           generate_release_notes: true
           name: Release ${{ github.ref_name }}
           tag_name: ${{ github.ref_name }}

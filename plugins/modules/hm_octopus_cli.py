@@ -17,7 +17,7 @@ description:
   - This module provides a pexpect-based terminal interaction for Hirschmann switches.
   - Optimized for Octopus 1 (Classic) using Latin-1 encoding and Octopus 2 (HiOS) handling pager and logout save prompts.
   - Preserves the shell session look (prompts and echoes) in stdout while providing a clean log for debugging.
-  - This module is part of the 'es.apfz' collection.
+  - This module is part of the 'edge.apfz' collection.
 requirements:
   - python >= 3.9
   - pexpect

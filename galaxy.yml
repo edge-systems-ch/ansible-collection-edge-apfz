@@ -1,10 +1,10 @@
-namespace: es
+namespace: edge
 name: apfz
 version: 0.0.0 # Note: Will be replaced with tag in CI
 authors:
   - Edge Systems
 description: Collection for APFZ system automation
-repository: https://github.com/edge-systems-ch/ansible-collection-es-apfz.git
+repository: https://github.com/edge-systems-ch/ansible-collection-edge-apfz.git
 readme: README.md
 license:
   - GPL-3.0-or-later
